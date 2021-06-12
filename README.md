@@ -1,3 +1,19 @@
+Photo Album like this
+
+![20210430_175635](https://user-images.githubusercontent.com/85778625/121770791-0723f380-cb9e-11eb-9862-7ca235b980f1.jpg)
+
+
+reference:
+https://github.com/hamedtaha/E-Paper-PhotoSlideShow
+https://github.com/waveshare/e-Paper/tree/master/RaspberryPi_JetsonNano/python/examples
+
+Epaper-module:
+https://www.waveshare.com/product/displays/e-paper/5.65inch-e-paper-f.htm
+https://www.waveshare.com/product/displays/e-paper/driver-boards/e-paper-driver-hat.htm
+
+Environment:
+RaspberryPi zerow
+
 # epaper-photoslide
 5.65inch-e-Paper photo alblum
   * OS: Raspbian for Raspberry Pi
@@ -69,8 +85,7 @@ python3 setup.py install
   
 3, copy your image  under folder ./jpg  
   
-4, run the with: python3 random_image.py
-  
+4, run script the with: python3 random_image.py
   
   Please note that image resolution ratio should be better 4：3 ,JPG/BMP/PNG/GIF formart are fine no need to convert resolution & pelettes since the resolution (600X448) and color will be processed inside python script
  
