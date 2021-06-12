@@ -34,6 +34,7 @@
  +-----+-----+---------+------+---+---Pi 3---+---+------+---------+-----+-----+
 
   == Hardware connection ==
+  
     EPD    =>    Raspberry Pi
   * VCC    ->    3.3
   * GND    ->    GND
@@ -46,9 +47,30 @@
 
   == How to use ==
   1, install the Python libraries.
-  2, change the current directory to where the files located.
-  3, copy your image  under folder ./jpg
-  3, run the with: ./python3 random_image.py
+ 
+sudo apt-get update
+
+sudo apt-get install python3-pip
+
+sudo apt-get install python3-pil
+
+sudo apt-get install python3-numpy
+
+sudo pip3 install RPi.GPIO
+
+sudo pip3 install spidev
+
+download waveshare https://github.com/waveshare/e-Paper/tree/master/RaspberryPi_JetsonNano/python ,  
+
+python3 setup.py install
+  
+
+2, change the current directory to where the files located.
+  
+3, copy your image  under folder ./jpg  
+  
+4, run the with: python3 random_image.py
+  
   
   Please note that image resolution ration should be 4：3 ,JPG/BMP/PNG/GIF formart are fine no need to convert pelettes since the resolution (600X448) and color will be processed inside python.
  
