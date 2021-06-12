@@ -72,5 +72,5 @@ python3 setup.py install
 4, run the with: python3 random_image.py
   
   
-  Please note that image resolution ration should be 4：3 ,JPG/BMP/PNG/GIF formart are fine no need to convert pelettes since the resolution (600X448) and color will be processed inside python.
+  Please note that image resolution ratio should be better 4：3 ,JPG/BMP/PNG/GIF formart are fine no need to convert resolution & pelettes since the resolution (600X448) and color will be processed inside python script
  
