@@ -39,11 +39,11 @@ palettedata = [
         0, 0, 0,
         255, 255, 255,
         67, 138, 28,
-		100, 64, 255,
+	100, 64, 255,
         191, 0, 0,
-		255, 243, 56,
-		232, 126, 0,
-		194 ,164 , 244
+	255, 243, 56,
+	232, 126, 0,
+	194 ,164 , 244
     ]
 p_img = Image.new('P', (16, 16))
 p_img.putpalette(palettedata * 32)
@@ -61,7 +61,13 @@ def main():
     ImageDraw.Draw(image)
     image = Image.open(choose_random_loading_image('jpg/'))
 #    logging.info("1.Drawing on the image...")
-    print('the loaded pic is:', image)
+#    print('the loaded pic is:', image)
+#   rotate the vertical image
+    h, w = image.size
+    if h < w:
+        image = image.rotate(270, expand=True)
+    else:
+        pass
 #   resize the source image to target resolution
     resized_img = image.resize((EPD_WIDTH, EPD_HEIGHT))
 #   replace the color to use 7 color palette
