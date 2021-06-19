@@ -26,7 +26,7 @@
 
 from waveshare_epd import epd5in65f
 from PIL import Image
-from PIL import *
+from PIL import ImageDraw
 import time
 import os
 import random
