@@ -25,7 +25,7 @@
  ##
 
 from waveshare_epd import epd5in65f
-from PIL import Image
+from PIL import Image, ImageEnhance
 from PIL import ImageDraw
 import time
 import os
@@ -70,6 +70,10 @@ def main():
         pass
 #   resize the source image to target resolution
     resized_img = image.resize((EPD_WIDTH, EPD_HEIGHT))
+#   enhance the saturation of the image
+    enhancer = ImageEnhance.Color(resized_img)
+    saturation_level = 2.0
+    colored_img = enhancer.enhance(saturation_level)
 #   replace the color to use 7 color palette
     colored_img = resized_img.quantize(palette=p_img)
     epd.display(epd.getbuffer(colored_img))
